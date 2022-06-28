@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+html, body {
+    font-family: "Lato", sans-serif;
+}
+
+/* Sélecteur de balise */
+h2 {
+    color: blue;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 8px 8px 5px violet;
+}
+
+/* Sélecteur d'identifiant */
+#textes {
+    background-color: aquamarine;
+}
+
+#textes h2 {
+    color: red;
+}
+
+#textes p strong {
+    color: rgb(255, 200, 47);
+}
+
+#textes sup {
+    color: violet;
+}
+
+/* Classe CSS */
+.citation {
+    border-left: 4px solid black;
+}
+
+#paragraphe-colonnes {
+    column-count: 3;
+    column-gap: 2em;
+    column-rule: 1px dashed black;
+}
+
+#background-test {
+    background-image: url('../img/eni-bleu.jpg');
+    background-size: contain;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}

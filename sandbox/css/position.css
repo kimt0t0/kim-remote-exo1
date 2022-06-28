@@ -1,0 +1,16 @@
+#conteneur {
+    display: block;
+    position: relative;
+    background-color: red;
+    height: 2000px;
+}
+
+#enfant {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: blue;
+    height: 150px;
+    width: 150px;
+}

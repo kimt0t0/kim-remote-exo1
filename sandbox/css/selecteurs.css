@@ -1,0 +1,57 @@
+body {
+    height: 100vh;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.4) 20%, #333 60%,#000 80%), url('../img/eni-bleu.jpg');
+}
+
+/* Lien a contenant "google" dans son attribut href */
+a[href*="google"] {
+    color: red;
+}
+
+a[href*="google"]:link {
+    color: aquamarine;
+}
+
+a[href*="google"]:visited {
+    color: green;
+}
+
+div#conteneur a:last-of-type {
+    background-color: gold;
+}
+
+div#conteneur button {
+    background-color: aqua;
+    padding: 30px;
+    border:0;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+}
+
+div#conteneur button::before {
+    content: '👌';
+}
+
+div#conteneur button:hover {
+    background-color: burlywood;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.6);
+}
+
+/* div#conteneur button:hover::after {
+    content: '🤘';
+} */
+
+div#conteneur button:active {
+    background-color: coral;
+}
+
+input[type='email'] {
+    padding: 15px;
+    border: 1px dotted black;
+}
+
+input[type='email']:focus {
+    outline: 2px solid orange;
+    border: 2px solid orange;
+}
