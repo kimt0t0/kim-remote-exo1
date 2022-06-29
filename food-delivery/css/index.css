@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-    --header-height: 80px;
-    
+    --header-height: 10vh;
+    --footer-height: 10vh;
+    --padding-default: 10px;
+    --main-height: calc(100vh - (var(--header-height) + var(--footer-height) + var(--padding-default) * 4));
+    --primary-color: darkslategray;
+    --text-color: white;
 }
 
 html, body {
@@ -32,14 +36,16 @@ h2 {
 }
 
 main {
-    flex-grow: 1;
+    height: var(--main-height);
+    /* flex-grow: 1; */
     justify-content: center;
     margin: 0;
     padding: 0;
 }
 
 header {
-    padding: 10px;
+    height: var(--header-height);
+    padding: var(--padding-default);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -48,10 +54,11 @@ header {
 }
 
 footer {
+    height: var(--footer-height);
     background-color: darkslategrey;
     display: flex;
     color: white;
-    padding: 20px;
+    padding: var(--padding-default);
     justify-content: space-around;
     align-items: center;
 }
@@ -75,20 +82,18 @@ header #logo {
 }
 
 #video-container {
+    height: var(--main-height);
     position: relative;
-    /* height: 100vh; */
     width: 100vw;
     max-width: 100%;
     flex: 1;
 }
 
 #video-bg {
-    /* padding: 0;
-    margin: 0; */
     object-fit: cover;
     max-width: 100%;
     width: 100vw;
-    height: 100vh;
+    height: var(--main-height);
     vertical-align: middle;
 }
 
