@@ -1,0 +1,55 @@
+#conteneur {
+    margin: 0 auto;
+    max-width: 980px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+header, nav, #gauche, #droite, section, footer {
+    padding: 5px;
+}
+
+header, footer {
+    background-color: darkslategray;
+    color: #fff;
+}
+
+nav, main {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    background-color: lightslategray;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+#gauche, #droite {
+    flex: 0 0 20%;
+    background-color: lightsteelblue;
+}
+
+#gauche a, #droite a {
+    text-decoration: none;
+    color: #000
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}

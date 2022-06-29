@@ -1,0 +1,11 @@
+#conteneur {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.bloc {
+    border: 1px solid black;
+    margin: 5px;
+}
