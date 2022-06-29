@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method='post' style='display: flex;flex-direction: column;'>
+        <label for='nom'>Nom :</label>
+        <input type='text' name='nom' id='nom'>
+        <label>
+            Prénom :
+            <input type='text' name='prenom' placeholder='Entrez votre prénom' required>
+        </label>
+        <label>
+            Mot de passe :
+            <input type='password' name='password' />
+        </label>
+        <label>
+            Zone de texte :
+            <textarea name='zoneDeTexte' rows='4'></textarea>
+        </label>
+        <label>
+            Ville :
+            <select name='ville-select'>
+                <option value=''></option>
+                <option value='nantes'>Nantes</option>
+                <option value='rennes'>Rennes</option>
+                <option value='niort'>Niort</option>
+                <option value='nice'>Nice</option>
+                <option value='paris'>Paris</option>
+                <option value='lyon'>Lyon</option>
+            </select>
+        </label>
+        <label>
+            Cours :
+            <input type='text' list='cours'>
+            <datalist id='cours'>
+                <option value='HTML5'>
+                <option value='CSS3'>
+                <option value='Javascript'>
+                <option value='React'>
+            </datalist>
+        </label>
+        <label>
+            <input type='checkbox' name='infos' value='infos'>
+            J'accepte de recevoir de la pub
+        </label>
+        <fieldset>
+            <legend>Règlement</legend>
+            <label>
+                <input type='radio' id='cheque' name='reglement' value='cheque'>
+                Chèque
+            </label>
+            <label>
+                <input type='radio' id='cb' name='reglement' value='cb'>
+                CB
+            </label>
+            <label>
+                <input type='radio' id='virement' name='reglement' value='virement'>
+                Virement
+            </label>
+        </fieldset>
+        <label>
+            Age : 
+            <input type='number' min='18' max='70' step='1' value='25'>
+        </label>
+        <label>
+            Age : 
+            <input type='range' min='18' max='70' step='1' value='25'>
+        </label>
+        <label>
+            Date de naissance :
+            <input type='date'>
+            <input type='time'>
+        </label>
+        <label>
+            Choisir une couleur :
+            <input type='color'>
+        </label>
+        <label>6
+            Autre types :
+            <input type='email'>
+            <input type='url'>
+            <input type='tel' name='tel' placeholder='00.00.00.00.00'
+            title='format demandé : 00.00.00.00.00'
+            pattern='(\+33|0) [1-9] (\.[0-9][0-9]) {4}'>
+            <input type='search'>
+        </label>
+        <input type='submit' title='Envoyer' />
+    </form>
+</body>
+
+</html>
