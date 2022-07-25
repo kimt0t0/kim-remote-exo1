@@ -46,3 +46,26 @@ h2 {
     background-repeat: repeat;
     background-attachment: fixed;
 }
+
+@media screen and (max-width: 480px) {
+    #paragraphe-colonnes {
+        column-count: 1;
+        column-gap: 0;
+        column-rule: none;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 720px) {
+    #paragraphe-colonnes {
+        column-count: 2;
+        column-gap: 1em;
+        column-rule: 1px dashed black;
+    }
+}
+
+@media print {
+    * {
+        color: black !important;
+        text-shadow: none !important;
+    }
+}

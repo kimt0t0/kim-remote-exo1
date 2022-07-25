@@ -6,6 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' type='text/css' href='./css/transformation.css' >
     <title>Les Transformations</title>
+    <script type='text/javascript'>
+        var face = true
+        function rotation3D() {
+            // On récupère notre élément principal
+            var scene = document.getElementById('scene-flip-3d')
+            // Si l'élément est de face alors on applique la rotation
+            // Sinon, on retire la rotation
+            if (face) {
+                scene.className = 'rotation'
+            } else {
+                scene.className = ''
+            }
+            face = !face
+        }
+    </script>
 </head>
 <body>
     <div id='maDiv'>
@@ -17,6 +32,13 @@
     <div id='progress-bar'>
         <div id='progress-bar-content'>
         </div>
+    </div>
+    <div id='conteneur-3d'>
+        <h1 id='objet-3d'>La 3D avec CSS3</h1>
+    </div>
+    <div id='scene-flip-3d' onclick='rotation3D();'>
+        <div class='face'>De face</div>
+        <div class='back face'>De dos</div>
     </div>
 </body>
 </html>
