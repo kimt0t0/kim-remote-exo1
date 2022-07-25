@@ -97,5 +97,5 @@
     bottom: 1px;
     right: 1px;
     transform-origin: left;
-    animation: progress-bar 2s ;
+    animation: progress-bar 2s alternate infinite ;
 }
