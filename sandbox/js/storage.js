@@ -74,3 +74,43 @@ storeData('USER', data)
 
 console.log(readData('USER'))
 
+/* Local SQL database */
+
+const db = window.openDatabase('eniService', '1.0', 'Ma première base locale SQL', 5 * 1024 * 1024)
+
+// Création de la base, d'une table et insertion d'une donnée
+db.transaction(tx => {
+    tx.executeSql('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, nom TEXT, age NUMERIC)', [], 
+    (tx, rs) => {
+        tx.executeSql('INSERT INTO users (nom, age) values (?,?)', ['Dupont', 30],
+        (tx, rs) => {
+            console.log('Données insérées !')
+        },
+        (tx,error) => {
+            console.error(error)
+        })
+    },
+    (tx, error) => {
+        console.error('Impossible de créer la table : ' + error)
+    })
+})
+
+// Lecture de données
+db.transaction(tx => {
+    tx.executeSql('SELECT * from users WHERE age < ?', [50],
+    (tx, rs) => {
+        if (!rs.rows.length) {
+            console.log('Pas de résultats')
+        } else {
+            let results = []
+            for (let i = 0; i < rs.rows.length; i++) {
+                results.push(rs.rows.item(i))
+            }
+            console.log(results)
+        }
+    },
+    (tx, error) => {
+        console.error(error)
+    })
+})
+
