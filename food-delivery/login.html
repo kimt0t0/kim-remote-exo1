@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='./css/index.css'>
+    <script type='text/javascript' src='./js/services/Api-functions.js'></script>
+    <script type='text/javascript' src='./js/components/Header.js'></script>
+    <title>Login</title>
+</head>
+<body>
+    <c-header></c-header>
+    <main>
+        <h1>Se connecter</h1>
+        <form action='#' method='post' onsubmit='login(event)'>
+            <label>
+                Email :
+                <input type='email' name='email' id='email' value='eni@test.fr'>
+            </label>
+            <br>
+            <label>
+                Mot de passe :
+                <input type='password' name='password' id='password' value='secret'>
+            </label>
+            <br>
+            <input type='submit' id='loginButton' value='Se connnecter'>
+        </form>
+        <div id='result'></div>
+    </main>
+</body>
+</html>
